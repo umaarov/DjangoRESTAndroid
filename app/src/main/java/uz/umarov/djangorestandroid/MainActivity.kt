@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val createdTask = response.body()!!
                     Log.d("MainActivity", "Task created: ${createdTask.title}")
-                    // Update adapter with the newly created task
                     adapter.addTask(createdTask)
                 } else {
                     Log.e(
