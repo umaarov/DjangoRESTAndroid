@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadTasksFromApi() {
         showProgressBar(true)
-        val retrofit = RetrofitClient.getClient("http://10.30.1.98:8000/")
+        val retrofit = RetrofitClient.getClient("ip address here")
         val apiService = retrofit.create(ApiService::class.java)
 
         apiService.getTasks().enqueue(object : Callback<MutableList<Task>> {
